@@ -25,11 +25,11 @@ echo "...Kube-prometheus-stack..."
 kubectl create namespace monitoring
 helm repo add stable https://charts.helm.sh/stable
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-helm install stable --namespace monitoring -f ~/cluster_infra/conf/monitoring.yml prometheus-community/kube-prometheus-stack 
+helm install stable --namespace monitoring -f ~/cluster_infra/terraform/conf/monitoring.yml prometheus-community/kube-prometheus-stack 
 
 # Jenkins 
 echo "...Jenkins..."
 kubectl create namespace jenkins
 helm repo add jenkins https://charts.jenkins.io
-helm install jenkins --namespace jenkins -f ~/cluster_infra/conf/jenkins.yml jenkins/jenkins
+helm install jenkins --namespace jenkins -f ~/cluster_infra/terraform/conf/jenkins.yml jenkins/jenkins
 kubectl create clusterrolebinding jenkins --clusterrole cluster-admin --serviceaccount=jenkins:default

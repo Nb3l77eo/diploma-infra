@@ -39,4 +39,4 @@ runcmd:
   - sudo -u ${username_def} echo ${YC_cloud_id} > /tmp/YC_cloud_id
   - sudo -u ${username_def} echo ${YC_folder_id} > /tmp/YC_folder_id
   - sudo -u ${username_def} echo ${k8s-id} > /tmp/k8s-id
-  - sudo -i -u ${username_def} /home/${username_def}/cluster_infra/src/deploy_cluster_infra.sh > /tmp/deploy_cluster_infra.log 2>&1
+  - sudo -i -u ${username_def} /home/${username_def}/cluster_infra/terraform/src/deploy_cluster_infra.sh > /tmp/deploy_cluster_infra.log 2>&1
