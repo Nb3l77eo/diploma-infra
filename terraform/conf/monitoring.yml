@@ -1,0 +1,5 @@
+grafana:
+  adminUser: gadmin
+  adminPassword: gadmin-pwd
+  service:
+    type: LoadBalancer
